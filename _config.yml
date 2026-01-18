@@ -1,0 +1,8 @@
+title: PGZ Zurich
+description: A minimal Jekyll POC
+baseurl: ""
+url: "http://localhost:4000"
+
+# Build settings
+markdown: kramdown
+theme: minima
