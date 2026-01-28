@@ -1,0 +1,171 @@
+// Bootstrap
+@use "bootstrap/scss/bootstrap";
+
+body {
+  padding-top: 66px;
+}
+
+.logo {
+  height: 40px;
+}
+
+html {
+  scroll-padding-top: 66px; /* Match the navbar height */
+}
+
+.twint-btn {
+  height: 7em;
+}
+
+.hero {
+  background-image: var(--hero-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 7rem 0;
+  color: white;
+
+  /* Center background on wide screens */
+  background-attachment: scroll;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Button styling */
+.hero .btn {
+  transition: all 0.3s ease;
+  font-weight: 500;
+  min-width: 200px;
+}
+
+.hero .btn-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.hero .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: fixed;
+    padding: 0;
+
+    /* Ensure full viewport height on mobile */
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+
+    // Ensure hero content stays in hero section: create new stacking context
+    isolation: isolate;
+  }
+
+  .hero .container {
+    position: fixed;
+    top: 66px;
+    bottom: 0;
+
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .hero h1 {
+    flex-grow: 1 !important;
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero {
+    background-size: 1400px auto;
+    background-position: center center;
+  }
+}
+
+.container#posts {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: -3rem;
+}
+
+footer {
+  position: relative;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/* Cookie Banner */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 9999;
+  display: none;
+}
+
+#cookie-banner.show {
+  display: block;
+}
+
+#cookie-banner p {
+  margin-bottom: 0;
+}
+
+/* External Content & Placeholders */
+.content-placeholder {
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-placeholder svg {
+  width: 64px;
+  height: 64px;
+}
+
+.twint-button-container {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #cookie-banner {
+    padding: 15px;
+  }
+
+  #cookie-banner .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .content-placeholder {
+    padding: 30px 15px;
+    min-height: 250px;
+  }
+
+  .content-placeholder svg {
+    width: 48px;
+    height: 48px;
+  }
+}

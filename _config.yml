@@ -1,8 +1,67 @@
-title: PGZ Zurich
-description: A minimal Jekyll POC
-baseurl: ""
-url: "http://localhost:4000"
+title: "Paragliding Club Zürich"
+title_short: PGZH
+address: "8000 Zürich, Schweiz"
+local_storage_key_consent: user-consent
+baseurl: "/"
+
+# Social Media & Contact
+email: vorstand@pgzh.ch
+#phone:
+google_calendar_id: pgzhzurich@gmail.com
+
+# TWINT
+twint_id:
+  uetlibergkarte: ybtwv
+  mitgliedschaft: bfvmc
+
+# SEO Settings
+url: "https://pgzh.ch"
+logo: "/assets/images/_original/logo.png"
+locale: de_CH
+social:
+  name: Paragliding Club Zürich
+  links:
+    - https://pgzh.ch
 
 # Build settings
 markdown: kramdown
-theme: minima
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll_picture_tag
+
+# Include in build
+include:
+  - assets
+
+# Exclude from build
+exclude:
+  - node_modules/
+  - _src/
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache
+  - README.md
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+picture:
+  source: "_data/img"
+  output: "assets/img"
+  markup: "img"
+  relative_url: true
+
+sass:
+  style: compressed
+  sass_dir: _sass

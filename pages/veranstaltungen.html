@@ -1,0 +1,122 @@
+---
+layout: page
+title: Veranstaltungen
+permalink: /pages/veranstaltungen/
+description: Aktuelle und kommende Events des Paragliding Club Zürich
+---
+
+<!-- Google Calendar Embed -->
+<div class="row">
+  <div class="col-sm-12 mb-4">
+    <div
+      class="calendar-container"
+      data-calendar-id="{{ site.google_calendar_id }}"
+    ></div>
+  </div>
+
+  <!-- Calendar Integration Info -->
+  <div class="col-sm-12 mb-2">
+    <div class="alert alert-info">
+      📆 Unsere Veranstaltungen werden regelmässig aktualisiert. Am besten du
+      integrierst sie gleich in deinen eigenen
+      <a href="{{ site.google_calendar }}" target="_blank" rel="noopener"
+        >Google Kalender</a
+      >. oder du abonnierst sie per iCal:
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          value="https://calendar.google.com/calendar/ical/{{ site.google_calendar_id | url_encode }}/public/basic.ics"
+          readonly
+          id="icalUrl"
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          onclick="copyToClipboard()"
+        >
+          📋 Kopieren
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event Types Info -->
+  <div class="col-sm-12">
+    <h3 class="mb-4">Unsere Veranstaltungen</h3>
+  </div>
+
+  <div class="col-sm-4 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">🪂 Flug-/Eventtage</h5>
+        <p class="card-text">
+          Gemeinsame Flugtage in verschiedenen Fluggebieten mit anschliessendem
+          Landebier.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">📍 Weekends & Trips</h5>
+        <p class="card-text">
+          Mehrtägige Ausflüge ins Tessin oder ins benachbarte Ausland.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">🌧️ Flug-Alternativprogramm</h5>
+        <p class="card-text">
+          Fondue-Abend und Glühwein trinken in der kalten Jahreszeit oder wenn
+          das Wetter an einem geplanten Flugtag einmal nicht mitspielt.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">📚 Themenabende</h5>
+        <p class="card-text">
+          Gelegentliche von erfahrenen Piloten lernen und Wissen auffrischen.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">👥 Generalversammlung</h5>
+        <p class="card-text">
+          Jährliche GV mit Jahresrückblick, Ausblick auf das kommende Jahr und
+          wichtigen Clubentscheiden.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function copyToClipboard() {
+    const input = document.getElementById("icalUrl");
+    input.select();
+    document.execCommand("copy");
+
+    const button = event.target.closest("button");
+    const originalHTML = button.innerHTML;
+    button.innerHTML = "✓ Kopiert!";
+
+    setTimeout(() => {
+      button.innerHTML = originalHTML;
+    }, 2000);
+  }
+</script>

@@ -1,0 +1,28 @@
+presets:
+  default:
+    formats: [webp]
+    widths: [600, 1200]
+    sizes:
+      mobile: 600px
+      tablet: 1200px
+    fallback_width: 1200
+    fallback_format: webp
+    quality: 85
+    strip_metadata: true
+  thumbnail:
+    formats: [webp]
+    widths: [600]
+    fallback_width: 600
+    fallback_format: webp
+    quality: 80
+    strip_metadata: true
+    dimension_attributes: true
+    crop: "4:3"
+    keep: "entropy"
+  modal:
+    formats: [webp]
+    widths: [1200]
+    fallback_width: 1200
+    fallback_format: webp
+    quality: 85
+    strip_metadata: true

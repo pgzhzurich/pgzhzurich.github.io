@@ -1,0 +1,94 @@
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5>{{ site.title }}</h5>
+        <p class="text-white-50">{{ site.address }}</p>
+        <div class="social-links">
+          <a
+            href="mailto:{{ site.email }}"
+            class="text-white me-3"
+            title="E-Mail"
+          >
+            <span class="fs-4">✉</span>
+          </a>
+          <a
+            href="https://calendar.google.com/calendar/embed?src={{ site.google_calendar_id | url_encode }}"
+            class="text-white me-3"
+            title="Kalender"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="fs-4">📅</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h5>Schnellzugriff</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a
+              href="{{ '/pages/fluggebiet' | relative_url }}"
+              class="text-white-50"
+              >Fluggebiet</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{ '/pages/veranstaltungen' | relative_url }}"
+              class="text-white-50"
+              >Veranstaltungen</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h5>Rechtliches</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a
+              href="{{ '/pages/datenschutz' | relative_url }}"
+              class="text-white-50"
+              >Datenschutzerklärung</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="consentManager.showSettings()"
+              class="text-white-50"
+              >Cookie-Einstellungen</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{ '/pages/dokumente' | relative_url }}"
+              class="text-white-50"
+              >Protokolle und Statuten</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{ '/pages/haftungsausschluss' | relative_url }}"
+              class="text-white-50"
+              >Haftungsausschluss</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-secondary" />
+
+    <div class="row">
+      <div class="col-12 text-center text-white-50">
+        <p class="mb-0">
+          &copy; {{ 'now' | date: "%Y" }} Paragliding Club Zürich. Alle Rechte
+          vorbehalten.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

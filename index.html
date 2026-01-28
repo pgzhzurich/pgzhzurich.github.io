@@ -1,0 +1,65 @@
+---
+layout: default
+title: Home
+---
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container text-center">
+       <h1 class="align-items-center">
+      Paragliding Club Zürich
+    </h1>
+
+    <div class="d-flex flex-column flex-sm-row d-md-none mb-4">
+      <a
+        href="{{ '/pages/uetlibergkarte' | relative_url }}"
+        class="btn btn-light btn-lg px-4 py-3 mb-3 rounded-pill"
+      >
+        Uetlibergkarte
+      </a>
+      <a
+        href="{{ '/pages/mitglied-werden' | relative_url }}"
+        class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill"
+      >
+        Mitglied werden
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="container position-relative bg-white" id="posts">
+  <h2>Aktuelle Beiträge</h2>
+
+  <div class="row">
+    {% for post in site.posts limit:2 %}
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <a
+          class="text-decoration-none text-dark"
+          href="{{ post.url | relative_url }}"
+        >
+          {% if post.image %} {% picture thumbnail {{ post.image }} --alt {{
+          post.title }} --img class="card-img-top" style="height: 200px" %} {%
+          endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text text-muted small">
+              {{ post.date | date: "%B %d, %Y" }}
+            </p>
+            <p class="card-text">{{ post.excerpt | strip_html }}</p>
+            <a href="{{ post.url | relative_url }}" class="btn btn-primary"
+              >Weiterlesen</a
+            >
+          </div></a
+        >
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="text-center mt-3">
+      <a href="{{ '/news' | relative_url }}" class="btn btn-outline-primary"
+        >Alle Beiträge ansehen</a
+      >
+    </div>
+  </div>
+</div>

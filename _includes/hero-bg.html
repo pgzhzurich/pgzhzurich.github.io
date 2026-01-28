@@ -1,0 +1,34 @@
+{% assign hero_images = "hero_0.jpg,hero_1.jpg,hero_2.jpg" | split: "," %}
+
+{% for i in (0..2) %}
+  {% capture pic_html %}{% picture modal {{ hero_images[i] }} %}{% endcapture %}
+  {% assign src_part = pic_html | split: 'src="' | last %}
+  {% assign hero_url = src_part | split: '"' | first %}
+  
+  {% if forloop.first %}
+    <style>
+      :root {
+        --hero-bg: url("{{ hero_url | relative_url }}"); /* Default fallback */
+        --hero-bg-{{ i }}: url("{{ hero_url | relative_url }}");
+  {% else %}
+        --hero-bg-{{ i }}: url("{{ hero_url | relative_url }}");
+  {% endif %}
+  
+  {% if forloop.last %}
+      }
+    </style>
+  {% endif %}
+{% endfor %}
+
+<script>
+  (function () {
+    const desktopImgs = [0, 2];
+    const mobileImgs = [0, 1, 2];
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    
+    const availableImgs = isMobile ? mobileImgs : desktopImgs;
+    const randomImg = availableImgs[Math.floor(Math.random() * availableImgs.length)];
+    
+    document.documentElement.style.setProperty('--hero-bg', `var(--hero-bg-${randomImg})`);
+  })();
+</script>
