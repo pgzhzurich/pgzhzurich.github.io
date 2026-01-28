@@ -1,0 +1,23 @@
+{
+  "name": "jekyll-bootstrap-starter",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "webpack --mode production",
+    "build:jekyll": "bundle exec jekyll build",
+    "build": "npm run build:css && npm run build:jekyll",
+    "watch:css": "webpack --mode development --watch",
+    "watch:jekyll": "bundle exec jekyll serve --livereload",
+    "dev": "concurrently \"npm run watch:css\" \"npm run watch:jekyll\""
+  },
+  "devDependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "concurrently": "^9.2.1",
+    "css-loader": "^7.1.3",
+    "mini-css-extract-plugin": "^2.10.0",
+    "sass": "^1.97.3",
+    "sass-loader": "^16.0.6",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1"
+  }
+}

@@ -1,0 +1,63 @@
+{% comment %}
+  Google Calendar Include
+  
+  Usage:
+  {% include google-calendar.html calendar_id="your-calendar-id@google.com" %}
+  
+  Optional parameters:
+  {% include google-calendar.html 
+    calendar_id="your-calendar-id@google.com"
+    ratio="16x9"
+    height="600"
+    mode="WEEK"
+    showTitle="1"
+    showNav="1"
+    showDate="1"
+    showPrint="0"
+    showTabs="1"
+    showCalendars="0"
+    showTz="0"
+  %}
+{% endcomment %}
+
+{% assign calendar_id = include.calendar_id %}
+{% assign ratio = include.ratio | default: "16x9" %}
+{% assign height = include.height %}
+{% assign mode = include.mode | default: "MONTH" %}
+{% assign timeZone = include.timeZone | default: "Europe/Zurich" %}
+{% assign showTitle = include.showTitle | default: "1" %}
+{% assign showNav = include.showNav | default: "1" %}
+{% assign showDate = include.showDate | default: "1" %}
+{% assign showPrint = include.showPrint | default: "0" %}
+{% assign showTabs = include.showTabs | default: "1" %}
+{% assign showCalendars = include.showCalendars | default: "0" %}
+{% assign showTz = include.showTz | default: "0" %}
+{% assign wkst = include.wkst | default: "2" %}
+{% assign bgcolor = include.bgcolor | default: "%23ffffff" %}
+{% assign color = include.color | default: "%23039BE5" %}
+
+{% if calendar_id %}
+  {% capture calendar_url %}https://calendar.google.com/calendar/embed?src={{ calendar_id | url_encode }}&ctz={{ timeZone | url_encode }}&mode={{ mode }}&showTitle={{ showTitle }}&showNav={{ showNav }}&showDate={{ showDate }}&showPrint={{ showPrint }}&showTabs={{ showTabs }}&showCalendars={{ showCalendars }}&showTz={{ showTz }}&wkst={{ wkst }}&bgcolor={{ bgcolor }}&color={{ color }}{% endcapture %}
+
+  <div 
+    id="calendar-container" class="ratio ratio-16x9"
+    data-calendar-url="{{ calendar_url }}"
+    {% if height %}data-height="{{ height }}"{% endif %}
+  >
+    <!-- Placeholder will be inserted by JavaScript -->
+  </div>
+
+  {% unless ratio == "custom" %}
+  <style>
+    #calendar-container .ratio {
+      --bs-aspect-ratio: {% if ratio == "16x9" %}56.25%{% elsif ratio == "4x3" %}75%{% elsif ratio == "21x9" %}42.85714286%{% elsif ratio == "1x1" %}100%{% else %}{{ ratio }}{% endif %};
+    }
+  </style>
+  {% endunless %}
+
+{% else %}
+  <div class="alert alert-warning" role="alert">
+    <strong>Error:</strong> No Google Calendar ID provided. 
+    Please use: {% raw %}{% include google-calendar.html calendar_id="your-calendar-id@google.com" %}{% endraw %}
+  </div>
+{% endif %}
