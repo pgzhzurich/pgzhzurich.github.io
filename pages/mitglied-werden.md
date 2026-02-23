@@ -1,15 +1,13 @@
 ---
 layout: page
-title: Mitglied werden
+title: Warum Mitglied werden?
 permalink: /pages/mitglied-werden/
 description: Werde Mitglied beim Paragliding Club Zürich und profitiere von vielen Vorteilen
 ---
 
-## Warum Mitglied werden?
+Der {{ site.name.short }} pflegt und erhält das Fluggebiet Uetliberg und besteht aus einer aktiven Community von begeisterten Gleitschirmpiloten und -pilotinnen aus der Region Zürich.
 
-Der {{ site.title_short }} pflegt und erhält das Fluggebiet Uetliberg und besteht aus einer aktiven Community von begeisterten Gleitschirmpiloten und -pilotinnen aus der Region Zürich.
-
-### Deine Vorteile als Mitglied
+## Deine Vorteile als Mitglied
 
 <div class="row my-4">
   <div class="col-md-6 mb-3">
@@ -124,9 +122,9 @@ document.getElementById('membershipForm').addEventListener('submit', function(e)
   };
   
   // Create email subject and body
-  const subject = 'Mitgliedschaft {{ site.title_short }} - ' + formData.name;
+  const subject = 'Mitgliedschaft {{ site.name.short }} - ' + formData.name;
   const body = 
-    'Liebes {{ site.title_short }} Team\n\n' +
+    'Liebes {{ site.name.short }} Team\n\n' +
     'Ich möchte Mitglied werden und habe kein TWINT. Hier sind meine Daten:\n\n' +
     'Name: ' + formData.name + '\n' +
     (formData.phone ? 'Telefon: ' + formData.phone + '\n' : '') +

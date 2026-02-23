@@ -5,18 +5,16 @@ permalink: /pages/uetlibergkarte/
 description: Bestelle deine Jahreskarte für das Fluggebiet Uetliberg
 ---
 
-## Jahreskarte
-
 Liebe Pilotin, lieber Pilot
 
 Vielen Dank für Dein Interesse an einer Jahreskarte für das Fluggebiet Uetliberg. Damit leistest du einen wertvollen Beitrag für den Unterhalt und den Erhalt des Fluggebietes.
 
-### Preise
+## Preise
 
-- **CHF 20.–** für {{ site.title_short }}-Mitglieder (CHF 60.- inkl [Mitgliedsbeitrag](/pages/mitglied-werden/))
+- **CHF 20.–** für {{ site.name.short }}-Mitglieder (CHF 60.- inkl [Mitgliedsbeitrag](/pages/mitglied-werden/))
 - **CHF 40.–** für Nicht-Mitglieder
 
-### Online-Bestellung
+## Online-Bestellung
 
 Die Uetlibergkarte kannst Du online unter dem folgenden Link beziehen:
 
@@ -26,7 +24,7 @@ Die Uetlibergkarte kannst Du online unter dem folgenden Link beziehen:
 >
 </div>
 
-### Alternative Bezugsorte
+## Alternative Bezugsorte
 
 Du kannst auch am Landeplatz für **CHF 5.-** ein Tagesticket lösen.
 
@@ -40,4 +38,4 @@ Du kannst auch am Landeplatz für **CHF 5.-** ein Tagesticket lösen.
 Wir wünschen dir viele schöne Flüge am Uezgi!
 
 **Liebe Grüsse**  
-_der {{ site.title_short }}-Vorstand_
+_der {{ site.name.short }}-Vorstand_

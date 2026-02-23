@@ -9,7 +9,7 @@ _Stand: Januar 2026_
 
 ## 1. Verantwortliche Stelle
 
-{{ site.title }},
+{{ site.name.long }},
 {{ site.address }}
 
 E-Mail: [{{ site.email }}](mailto:{{ site.email }})  
@@ -173,6 +173,6 @@ Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie 
 
 Bei Fragen zum Datenschutz können Sie sich jederzeit an uns wenden:
 
-{{ site.title }}  
+{{ site.name.long }}  
 [{{ site.email }}](mailto:{{ site.email }})  
 {% if site.phone %}Telefon: {{ site.phone }}{% endif %}

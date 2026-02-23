@@ -1,5 +1,7 @@
-title: "Paragliding Club Zürich"
-title_short: PGZH
+title: PGZH
+name:
+  long: "Paragliding Club Zürich"
+  short: PGZH
 address: "8000 Zürich, Schweiz"
 local_storage_key_consent: user-consent
 baseurl: "/"

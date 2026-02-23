@@ -1,21 +1,19 @@
 ---
 layout: page
-title: Protokolle und Statuten
+title: Vereinsdokumente
 permalink: /pages/dokumente/
 description: Offizielle Dokumente des Paragliding Club Zürich
 ---
 
-## Vereinsdokumente
+Hier findest du alle wichtigen offiziellen Dokumente des {{ site.name.short }}.
 
-Hier findest du alle wichtigen offiziellen Dokumente des {{ site.title_short }}.
-
-### Statuten
+## Statuten
 
 Die Statuten regeln die Organisation, Struktur und Ziele des Vereins.
 
 {% include statuten.html %}
 
-### Protokolle der Generalversammlungen
+## Protokolle der Generalversammlungen
 
 <div class="list-group mb-4">
   <div class="list-group-item">
@@ -75,7 +73,7 @@ Die Statuten regeln die Organisation, Struktur und Ziele des Vereins.
   </div>
 </div>
 
-### Weitere Dokumente
+## Weitere Dokumente
 
 <div class="row">
   <div class="col-md-6 mb-3">

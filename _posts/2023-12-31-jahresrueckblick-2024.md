@@ -17,7 +17,7 @@ Auch der zweite Flug/Eventtag hatte viel Föhn. Dieser und die Lokalen haben uns
 
 ## Mai: Engelbergercup
 
-Im Mai haben vier vom {{ site.title_short }} am Engelbergercup teilgenommen. Bei sehr wechselhaften Bedingungen wurde geflogen, gewandert oder mit der Bahn gefahren. Einige haben in der Luft Graupelschauer erwischt oder beim Zielanflug eine Regenwand angetroffen. Die meisten kamen trocken ins Ziel aber alle glücklich und unverletzt. Anschliessend gab es ein feines Znacht und einige Landebiere. Ein Tag der einfach alles beinhaltete.
+Im Mai haben vier vom {{ site.name.short }} am Engelbergercup teilgenommen. Bei sehr wechselhaften Bedingungen wurde geflogen, gewandert oder mit der Bahn gefahren. Einige haben in der Luft Graupelschauer erwischt oder beim Zielanflug eine Regenwand angetroffen. Die meisten kamen trocken ins Ziel aber alle glücklich und unverletzt. Anschliessend gab es ein feines Znacht und einige Landebiere. Ein Tag der einfach alles beinhaltete.
 
 ## Sommer: Themenabende und Lenk-Weekend
 

@@ -19,8 +19,8 @@ website/
 
 ```bash
 # Install Dependencies on Ubuntu/Debian (if not already installed)
-sudo apt-get install ruby-full libvips
-echo 'export PATH=$HOME/.local/share/gem/ruby/3.1.0/bin:$PATH' >> ~/.bashrc
+sudo apt-get install ruby-full libvips imagemagick build-essential pkg-config libssl-dev
+echo 'export PATH=$HOME/.local/share/gem/ruby/<version>/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 
 # Install Bundler

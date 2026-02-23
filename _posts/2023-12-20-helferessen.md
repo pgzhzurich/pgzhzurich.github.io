@@ -7,7 +7,7 @@ tags: [2023, Helferessen]
 description: Bericht vom Helferessen
 ---
 
-10 Personen vom {{ site.title_short }} trafen sich im La Cucina in Zürich zum Dank für die 2023 geleistete Arbeit für den Club und dem Austausch wie es weitergeht mit dem {{ site.title_short }}.
+10 Personen vom {{ site.name.short }} trafen sich im La Cucina in Zürich zum Dank für die 2023 geleistete Arbeit für den Club und dem Austausch wie es weitergeht mit dem {{ site.name.short }}.
 
 Marco Marantra konnte seine Tätigkeiten als Fluggebietsbetreuer Uetliberg an Kaspar Schärer und Peter Joss weitergeben. Peter war schon einmal mit in der Arbeitsgruppe Uetliberg und ist jetzt mit Kaspar Schärer zusammen zuständig für den Uezgi.
 

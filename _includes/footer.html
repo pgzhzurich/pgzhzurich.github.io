@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 mb-4">
-        <h5>{{ site.title }}</h5>
+        <h5>{{ site.name.long }}</h5>
         <p class="text-white-50">{{ site.address }}</p>
         <div class="social-links">
           <a
@@ -47,14 +47,7 @@
       <div class="col-md-4 mb-4">
         <h5>Rechtliches</h5>
         <ul class="list-unstyled">
-          <li>
-            <a
-              href="{{ '/pages/datenschutz' | relative_url }}"
-              class="text-white-50"
-              >Datenschutzerklärung</a
-            >
-          </li>
-          <li>
+           <li>
             <a
               href="#"
               onclick="consentManager.showSettings()"
@@ -64,9 +57,9 @@
           </li>
           <li>
             <a
-              href="{{ '/pages/dokumente' | relative_url }}"
+              href="{{ '/pages/datenschutz' | relative_url }}"
               class="text-white-50"
-              >Protokolle und Statuten</a
+              >Datenschutzerklärung</a
             >
           </li>
           <li>
@@ -74,6 +67,13 @@
               href="{{ '/pages/haftungsausschluss' | relative_url }}"
               class="text-white-50"
               >Haftungsausschluss</a
+            >
+          </li> 
+           <li>
+            <a
+              href="{{ '/pages/dokumente' | relative_url }}"
+              class="text-white-50"
+              >Dokumente</a
             >
           </li>
         </ul>
@@ -85,7 +85,7 @@
     <div class="row">
       <div class="col-12 text-center text-white-50">
         <p class="mb-0">
-          &copy; {{ 'now' | date: "%Y" }} Paragliding Club Zürich. Alle Rechte
+          &copy; {{ 'now' | date: "%Y" }} {{ site.name.long }}. Alle Rechte
           vorbehalten.
         </p>
       </div>
