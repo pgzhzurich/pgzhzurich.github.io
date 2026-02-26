@@ -8,18 +8,17 @@
       href="{{ '/pages/uetlibergkarte/' | relative_url }}"
       >Uetlibergkarte</a
     >
+  </li> <li class="nav-item">
+    <a
+      class="nav-link {% if page.url contains 'veranstaltungen' %}active{% endif %}"
+      href="{{ '/pages/veranstaltungen' | relative_url }}"
+      >Veranstaltungen</a
+    >
   </li><li class="nav-item">
     <a
       class="nav-link {% if page.url contains 'fluggebiet' %}active{% endif %}"
       href="{{ '/pages/fluggebiet' | relative_url }}"
       >Fluggebiet</a
-    >
-  </li>
-  <li class="nav-item">
-    <a
-      class="nav-link {% if page.url contains 'veranstaltungen' %}active{% endif %}"
-      href="{{ '/pages/veranstaltungen' | relative_url }}"
-      >Veranstaltungen</a
     >
   </li>
   <li class="nav-item">

@@ -18,7 +18,7 @@ twint_id:
 
 # SEO Settings
 url: "https://pgzh.ch"
-logo: "/assets/images/_original/logo.png"
+logo: "/assets/images/_original/Logo.png"
 locale: de_CH
 social:
   name: Paragliding Club Zürich
@@ -63,6 +63,7 @@ picture:
   output: "assets/img"
   markup: "img"
   relative_url: true
+  suppress_warnings: true
 
 sass:
   style: compressed

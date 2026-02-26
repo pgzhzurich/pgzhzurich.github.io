@@ -1,0 +1,69 @@
+{% assign imgs = include.images %}
+
+<!-- Image Gallery -->
+<div class="row g-3 my-4" id="imageGallery">
+  {% for img in imgs %}
+  <div class="col-6 col-md-4">
+    {% picture thumbnail {{ img.file }} --alt {{ img.alt }} --img
+    class="img-fluid rounded" data-bs-toggle="modal"
+    data-bs-target="#carouselModal" data-slide-index="{{ forloop.index0 }}"
+    role="button" style="cursor:zoom-in" %}
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Carousel Modal -->
+<div class="modal fade" id="carouselModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-secondary">
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body d-flex align-items-center justify-content-center">
+        <div
+          id="galleryCarousel"
+          class="carousel slide w-100"
+          data-bs-ride="false"
+        >
+          <div class="carousel-inner">
+            {% for img in imgs %}
+            <div class="carousel-item{% if forloop.first %} active{% endif %}">
+              {% picture modal {{ img.file }} --alt {{ img.alt }} --img
+              class="d-block mx-auto" %} {% if img.alt %}
+              <div class="carousel-caption">
+                <small class="bg-dark bg-opacity-50 rounded px-2 py-1"
+                  >{{ img.alt }}</small
+                >
+              </div>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#galleryCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Zurück</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#galleryCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Vor</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

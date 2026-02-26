@@ -25,7 +25,7 @@ Auf <a href="https://www.meteoschweiz.admin.ch/service-und-publikationen/applika
 
 <div class="row my-4">
   <div class="col-md-8">
-    {% picture leimbach_landeplatz.jpg --alt Landeplatz Leimbach --img class="img-fluid rounded shadow" %}
+    {% picture Leimbach_Landeplatz.jpg --alt Landeplatz Leimbach --img class="img-fluid rounded shadow" %}
   </div>
 </div>
 
@@ -41,7 +41,7 @@ Wir empfehlen eine **Rechtsvolte** an der unteren Kante des Landeplatzes und den
 
 <div class="row my-4">
   <div class="col-md-8">
-    {% picture leimbach_rechtsvolte.jpg --alt Rechtsvolte Landeplatz --img class="img-fluid rounded shadow" %}
+    {% picture Leimbach_Rechtsvolte.jpg --alt Rechtsvolte Landeplatz --img class="img-fluid rounded shadow" %}
   </div>
 </div>
 

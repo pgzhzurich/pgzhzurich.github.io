@@ -119,7 +119,7 @@ const consentManager = {
   },
 
   _getDisclaimer(provider) {
-    return ` anzuzeigen müssen externe Inhalte von ${provider} eingebunden werden. Dabei werden Daten an ${provider} übermittelt.Dafür benötigen wir Ihre Zustimmung zu unserer <a href="{{ '/pages/datenschutz' | relative_url }}" target="_blank">Datenschutzerklärung</a>.</p>
+    return ` anzuzeigen müssen externe Inhalte von ${provider} eingebunden werden. Dabei werden Daten an ${provider} übermittelt. Dafür benötigen wir Ihre Zustimmung zu unserer <a href="{{ '/pages/datenschutz' | relative_url }}" target="_blank">Datenschutzerklärung</a>.</p>
     <button class="btn btn-primary" onclick="consentManager.accept()">Inhalte laden und akzeptieren</button></div>`;
   },
 
