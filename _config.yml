@@ -51,6 +51,7 @@ exclude:
   - vendor
   - .jekyll-cache
   - README.md
+  - pages/fotos_list.html
 
 # Collections
 collections:

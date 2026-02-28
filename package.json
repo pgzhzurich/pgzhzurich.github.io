@@ -6,7 +6,7 @@
     "build:jekyll": "bundle exec jekyll build",
     "build": "npm run build:css && npm run build:jekyll",
     "watch:css": "webpack --mode development --watch",
-    "watch:jekyll": "bundle exec jekyll serve --livereload",
+    "watch:jekyll": "bundle exec jekyll serve --livereload --config _config.yml,_config_dev.yml",
     "dev": "concurrently \"npm run watch:css\" \"npm run watch:jekyll\""
   },
   "devDependencies": {

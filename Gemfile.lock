@@ -12,6 +12,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
+    exifr (1.5.1)
     ffi (1.17.3)
     ffi (1.17.3-arm64-darwin)
     ffi (1.17.3-x86_64-darwin)
@@ -114,6 +115,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  exifr (~> 1.5)
   jekyll (~> 4.4.1)
   jekyll-feed (~> 0.17)
   jekyll-seo-tag (~> 2.8)

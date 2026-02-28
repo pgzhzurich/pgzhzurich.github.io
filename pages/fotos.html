@@ -1,0 +1,112 @@
+---
+layout: default
+title: Fotos
+description: "Fotogalerie – Bilder aus dem Clubleben"
+permalink: /pages/fotos/
+---
+
+<div id="fotos-page" class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold">Fotos</h1>
+    <p class="text-muted">{{ site.data.images_list | size }} Bilder</p>
+  </div>
+
+  {% assign all_years = site.data.images_list | map: "year" | uniq | sort |
+  reverse %} {% assign years = all_years | where_exp: "y", "y != 'unknown'" %}
+  {% for year in years %} {% assign year_photos = site.data.images_list | where:
+  "year", year | where_exp: "p", "p.year != 'unknown'" %}
+  <h2 class="fw-bold border-bottom pb-2 mb-3">
+    {{ year }}
+    <small class="text-muted fs-6 fw-normal"
+      >{{ year_photos | size }} Bilder</small
+    >
+  </h2>
+  <div class="row g-3 mb-5">
+    {% for photo in year_photos %}
+    <div class="col-6 col-md-4 col-lg-3">
+      <div
+        class="ratio ratio-4x3 rounded overflow-hidden fotos-thumb"
+        data-year="{{ year }}"
+        data-index="{{ forloop.index0 }}"
+        data-bs-toggle="modal"
+        data-bs-target="#carouselModal-{{ year }}"
+        role="button"
+      >
+        {% picture thumbnail {{ photo.file }} --alt {{ photo.file }} --img
+        class="w-100 h-100 object-fit-cover" %}
+      </div>
+      <div class="text-muted small mt-1">
+        {{ photo.title }} · {{ photo.date | date: "%d.%m.%Y" }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+
+<!-- One modal per year with static carousel items -->
+{% for year in years %} {% assign year_photos = site.data.images_list | where:
+"year", year | where_exp: "p", "p.year != 'unknown'" %}
+<div
+  class="modal fade"
+  id="carouselModal-{{ year }}"
+  tabindex="-1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-secondary">
+        <span class="text-white fw-bold fs-5">{{ year }}</span>
+        <button
+          type="button"
+          class="btn-close btn-close-white ms-auto"
+          data-bs-dismiss="modal"
+          aria-label="Schließen"
+        ></button>
+      </div>
+      <div
+        class="modal-body d-flex align-items-center justify-content-center fotos-modal-body"
+      >
+        <div
+          id="carousel-{{ year }}"
+          class="carousel slide w-100"
+          data-bs-ride="false"
+        >
+          <div class="carousel-inner">
+            {% for photo in year_photos %}
+            <div class="carousel-item{% if forloop.first %} active{% endif %}">
+              {% picture modal {{ photo.file }} --alt {{ photo.file }} --img
+              class="d-block mx-auto fotos-carousel-img" %}
+              <div class="carousel-caption">
+                <small class="bg-dark bg-opacity-50 rounded px-2 py-1"
+                  >{{ photo.title }} · {{ photo.date | date: "%d.%m.%Y"
+                  }}</small
+                >
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel-{{ year }}"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Zurück</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel-{{ year }}"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Vor</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}

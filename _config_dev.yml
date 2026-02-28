@@ -1,0 +1,11 @@
+exclude:
+  - node_modules/
+  - _src/
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache
+  - README.md

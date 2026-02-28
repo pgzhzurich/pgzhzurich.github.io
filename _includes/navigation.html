@@ -8,27 +8,19 @@
       href="{{ '/pages/uetlibergkarte/' | relative_url }}"
       >Uetlibergkarte</a
     >
-  </li> <li class="nav-item">
+  </li>  <li class="nav-item">
     <a
-      class="nav-link {% if page.url contains 'veranstaltungen' %}active{% endif %}"
-      href="{{ '/pages/veranstaltungen' | relative_url }}"
-      >Veranstaltungen</a
+      class="nav-link {% if page.url contains 'mitglied-werden' %}active{% endif %}"
+      href="{{ '/pages/mitglied-werden' | relative_url }}"
+      >Mitglied werden</a
     >
-  </li><li class="nav-item">
+  </li> <li class="nav-item">
     <a
       class="nav-link {% if page.url contains 'fluggebiet' %}active{% endif %}"
       href="{{ '/pages/fluggebiet' | relative_url }}"
       >Fluggebiet</a
     >
   </li>
-  <li class="nav-item">
-    <a
-      class="nav-link {% if page.url contains 'mitglied-werden' %}active{% endif %}"
-      href="{{ '/pages/mitglied-werden' | relative_url }}"
-      >Mitglied werden</a
-    >
-  </li>
-  
   <li class="nav-item dropdown">
     <a
       class="nav-link dropdown-toggle"
@@ -36,22 +28,36 @@
       role="button"
       data-bs-toggle="dropdown"
     >
-      Über uns
+      Club
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a
-          class="dropdown-item {% if page.url contains 'pgzh' %}active{% endif %}"
-          href="{{ '/pages/pgzh' | relative_url }}"
-          >{{ site.name.short }}</a
-        >
-      </li> <li >
+      <li >
     <a
       class="dropdown-item {% if page.url contains 'news' %}active{% endif %}"
       href="{{ '/news' | relative_url }}"
       >Neuigkeiten</a
     >
   </li>
+   <li class="nav-item">
+    <a
+      class="dropdown-item {% if page.url contains 'veranstaltungen' %}active{% endif %}"
+      href="{{ '/pages/veranstaltungen' | relative_url }}"
+      >Veranstaltungen</a
+    >
+  </li>
+   <li class="nav-item">
+    <a
+      class="dropdown-item {% if page.url contains 'fotos' %}active{% endif %}"
+      href="{{ '/pages/fotos' | relative_url }}"
+      >Fotos</a
+    >
+  </li> <li>
+        <a
+          class="dropdown-item {% if page.url contains 'pgzh' %}active{% endif %}"
+          href="{{ '/pages/pgzh' | relative_url }}"
+          >Über uns</a
+        >
+      </li>
       <li>
     <a
       class="dropdown-item {% if page.url contains 'dokumente' %}active{% endif %}"

@@ -1,0 +1,28 @@
+---
+layout: page
+title: Fotoliste
+permalink: /pages/fotos_list/
+sitemap: false
+noindex: true
+---
+
+<table>
+  <thead>
+    <tr>
+      <th>Dateiname</th>
+      <th>Titel</th>
+      <th>Aufnahmedatum</th>
+      <th>Aufnahmejahr</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for img in site.data.images_list %}
+    <tr>
+      <td>{{ img.file }}</td>
+      <td>{{ img.title }}</td>
+      <td>{{ img.date }}</td>
+      <td>{{ img.year }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

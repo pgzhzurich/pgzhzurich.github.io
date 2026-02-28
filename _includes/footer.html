@@ -21,6 +21,7 @@
           >
             <span class="fs-4">📅</span>
           </a>
+          <a href="{{ '/feed.xml' | relative_url }}" class="text-white me-3" title="RSS Feed" target="_blank" rel="noopener"><span class="fs-4">📰</span></a>
         </div>
       </div>
 
@@ -55,6 +56,7 @@
               >Mitglied werden</a
             >
           </li>
+          {% if jekyll.environment == "development" %}<a href="/pages/fotos_list/"  style="color: red;">Fotoliste</a>{% endif %}
         </ul>
       </div>
 

@@ -8,10 +8,19 @@ Relevant paths to create new posts:
 
 ```
 website/
-├── _data
-│   ├── img/
-├── _posts/
+├── _data/
+│   └── img/          # Images
+├── _posts/           # Blog posts
 ```
+
+### Image Gallery
+
+JPEG/JPG images placed in `_data/img/` are automatically processed at build time and published in the image gallery, grouped by year. The image title is derived from the filename: the extension and any trailing counters (e.g. `_1`, `_2`) are dropped and underscores are replaced with spaces.
+
+| Filename | Title |
+|---|---|
+| `Annecy_1.jpg` | `Annecy` |
+| `Leimbach_Landeplatz.jpg` | `Leimbach Landeplatz` |
 
 ## Installation & Usage
 
