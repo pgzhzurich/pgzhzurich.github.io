@@ -9,14 +9,14 @@
     calendar_id="your-calendar-id@google.com"
     ratio="16x9"
     height="600"
-    mode="WEEK"
-    showTitle="1"
+    mode="MONTH"
+    showTitle="0"
     showNav="1"
     showDate="1"
-    showPrint="0"
+    showPrint="1"
     showTabs="1"
     showCalendars="0"
-    showTz="0"
+    showTz="1"
   %}
 {% endcomment %}
 
@@ -25,10 +25,10 @@
 {% assign height = include.height %}
 {% assign mode = include.mode | default: "MONTH" %}
 {% assign timeZone = include.timeZone | default: "Europe/Zurich" %}
-{% assign showTitle = include.showTitle | default: "1" %}
+{% assign showTitle = include.showTitle | default: "0" %}
 {% assign showNav = include.showNav | default: "1" %}
 {% assign showDate = include.showDate | default: "1" %}
-{% assign showPrint = include.showPrint | default: "0" %}
+{% assign showPrint = include.showPrint | default: "1" %}
 {% assign showTabs = include.showTabs | default: "1" %}
 {% assign showCalendars = include.showCalendars | default: "0" %}
 {% assign showTz = include.showTz | default: "0" %}

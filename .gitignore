@@ -3,6 +3,7 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+.vscode/
 assets/css/
 assets/js/main.js
 assets/js/main.js.LICENSE.txt

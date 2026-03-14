@@ -45,3 +45,9 @@ document.addEventListener("keydown", (e) => {
     c.prev();
   }
 });
+
+// open external links in new tabs
+document.querySelectorAll('.post-content a[href^="https"]').forEach((link) => {
+  link.setAttribute("target", "_blank");
+  link.setAttribute("rel", "noopener noreferrer");
+});

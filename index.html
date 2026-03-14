@@ -29,7 +29,7 @@ title: Home
   <h2>Aktuelle Beiträge</h2>
 
   <div class="row">
-    {% for post in site.posts limit:2 %}
+    {% for post in site.posts limit:4 %}
     <div class="col-md-6 mb-4">
       <div class="card">
         <a
@@ -37,8 +37,7 @@ title: Home
           href="{{ post.url | relative_url }}"
         >
           {% if post.image %} {% picture thumbnail {{ post.image }} --alt {{
-          post.title }} --img class="card-img-top" style="height: 200px" %} {%
-          endif %}
+          post.title }} --img class="card-img-top" %} {% endif %}
           <div class="card-body">
             <h5 class="card-title">{{ post.title }}</h5>
             <p class="card-text text-muted small">

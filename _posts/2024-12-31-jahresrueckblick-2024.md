@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Der PGZH 2024"
-date: 2025-01-06
+date: 2024-12-31
 categories: [News, Jahresrückblick]
 tags: [2024, Jahresrückblick, Events]
 description: Ein ereignisreiches Jahr 2024 beim Paragliding Club Zürich
