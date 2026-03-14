@@ -38,8 +38,8 @@ Der {{ site.name.short }}-Vorstand organisiert die Club-Aktivitäten und Unterha
 ### Aktuelle Vorstandsmitglieder
 
 - **Präsident:** Tom Stephan
-- **Flug-Events:** Ivo Bryner & Bruno Jäger
-- **Website:** Pat Gamma & Stefan Kunz
+- **Flug-Events:** Bruno Jäger
+- **Website:** Stefan Kunz
 - **Kassier:** Roland Schmid
 
 ### Weitere Engagierte Mitglieder
