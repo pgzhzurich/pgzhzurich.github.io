@@ -18,6 +18,17 @@ Die Statuten regeln die Organisation, Struktur und Ziele des Vereins.
 <div class="list-group mb-4">
   <div class="list-group-item">
     <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Protokoll GV 2026</h5>
+      <small>27. Februar 2026</small>
+    </div>
+    <p class="mb-1">Gemeinschaftsraum Genossenschaft Hofgarten, Zwirnerstrasse 269, Leimbach</p>
+    <a href="/assets/documents/PGZH_GV_Protokoll_260227.pdf" class="btn btn-sm btn-outline-primary" download>
+      Download
+    </a>
+  </div>
+
+  <div class="list-group-item">
+    <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Protokoll GV 2025</h5>
       <small>28. Februar 2025</small>
     </div>
