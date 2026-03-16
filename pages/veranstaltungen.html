@@ -16,28 +16,35 @@ description: Aktuelle und kommende Events des Paragliding Club Zürich
 
   <!-- Calendar Integration Info -->
     <div class="alert alert-info">
-      📆 Unsere Veranstaltungen werden regelmässig aktualisiert. Am besten du
-      integrierst sie gleich in deinen eigenen
-      <a href="https://calendar.google.com/calendar/r?cid={{ site.google_calendar_id | url_encode }}" target="_blank" rel="noopener"
-        >Google Kalender</a
-      > oder du abonnierst sie per iCal:
-      <div class="input-group">
-        <input
-          type="text"
-          class="form-control"
-          value="https://calendar.google.com/calendar/ical/{{ site.google_calendar_id | url_encode }}/public/basic.ics"
-          readonly
-          id="icalUrl"
-        />
-        <button
-          class="btn btn-outline-secondary"
-          type="button"
-          onclick="copyToClipboard()"
-        >
-          📋 Kopieren
-        </button>
-      </div>
+  <p>
+    <strong>📆 Termine abonnieren</strong><br>
+    Unsere Veranstaltungen werden regelmäßig aktualisiert. Integriere sie direkt in deinen Kalender:
+  </p>
+
+  <div class="d-flex flex-wrap gap-2 mb-3">
+    <a class="btn btn-primary btn-sm" href="https://calendar.google.com/calendar/r?cid={{ site.google_calendar_id | url_encode }}" target="_blank" rel="noopener">
+      Google Kalender hinzufügen
+    </a>
+    <a class="btn btn-primary btn-sm" href="webcal://calendar.google.com/calendar/ical/{{ site.google_calendar_id | url_encode }}/public/basic.ics">
+      iPhone / Mac Abo
+    </a>
+  </div>
+
+  <div class="input-group input-group-sm mb-3">
+    <span class="input-group-text">iCal-URL</span>
+    <input type="text" class="form-control" value="https://calendar.google.com/calendar/ical/{{ site.google_calendar_id | url_encode }}/public/basic.ics" readonly id="icalUrl">
+    <button class="btn btn-secondary" type="button" onclick="copyToClipboard()">📋 Kopieren</button>
+  </div>
+
+  <div class="row g-3 small">
+    <div class="col-sm-6">
+      <strong>Android:</strong> Button oben nutzen oder iCal-URL manuell im Google Kalender unter "Weitere Kalender +" > "Per URL" hinzufügen.
     </div>
+    <div class="col-sm-6">
+      <strong>iPhone:</strong> Am besten den Button "iPhone Abo" klicken. Sonst die iCal-URL manuell hinzufügen: <em>Einstellungen > Kalender > Accounts > Abo hinzufügen</em>.
+    </div>
+  </div>
+</div>
   </div>
 
   <!-- Event Types Info -->
