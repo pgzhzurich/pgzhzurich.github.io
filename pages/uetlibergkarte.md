@@ -18,11 +18,7 @@ Vielen Dank für Dein Interesse an einer Jahreskarte für das Fluggebiet Uetlibe
 
 Die Uetlibergkarte kannst Du online unter dem folgenden Link beziehen:
 
-<div 
-  class="twint-button-container" 
-  data-solution-id="{{ site.twint_id.uetlibergkarte }}"
->
-</div>
+<a href="https://pay.raisenow.io/{{ site.twint_id.uetlibergkarte }}?lng=de" target="_blank" class="btn btn-primary btn-lg">Mit TWINT bezahlen</a>
 
 ## Alternative Bezugsorte
 

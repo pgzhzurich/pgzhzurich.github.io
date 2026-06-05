@@ -3,7 +3,7 @@ layout: post
 title: "Clubtrip nach Annecy, 7.-10. August 2025"
 date: 2025-08-10
 categories: [News, Events]
-tags: [Annecy, Clubtrip, Fluggebiet]
+tags: [2025, Annecy, Clubtrip, Fluggebiet]
 image: Annecy_5.jpg
 description: Bericht vom Clubtrip nach Annecy
 gallery:

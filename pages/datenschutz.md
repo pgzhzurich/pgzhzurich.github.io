@@ -89,7 +89,7 @@ Weitere Informationen: <a href="https://policies.google.com/privacy" target="_bl
 Für Onlinezahlungen nutzen wir RaiseNow, einen Dienst der RaiseNow AG, Hardturmstrasse 101, 8005 Zürich, Schweiz.
 
 **Datenverarbeitung:**
-Beim Laden des TWINT-Buttons wird eine Verbindung zu den Servern von RaiseNow hergestellt (UNPKG CDN). Dabei werden folgende Daten übermittelt:
+Beim Aufruf des TWINT-Buttons wird eine Verbindung zu den Servern von RaiseNow hergestellt. Dabei werden folgende Daten übermittelt:
 
 - Ihre IP-Adresse
 - Browsertyp und -version
@@ -106,9 +106,7 @@ Diese Daten werden zur Abwicklung der Zahlung und für die Lieferung benötigt.
 **Rechtsgrundlage:**
 
 - Einwilligung für das Laden des Buttons (Art. 6 Abs. 1 DSG)
-- Vertragserfüllung bei Durchführung einer Spende
-
-Der TWINT-Button wird nur geladen, wenn Sie diesem ausdrücklich zustimmen.
+- Vertragserfüllung bei Durchführung einer Zahlung
 
 Weitere Informationen: <a href="https://www.raisenow.com/de-ch/datenschutz" target="_blank">https://www.raisenow.com/de-ch/datenschutz</a>
 

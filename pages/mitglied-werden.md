@@ -65,7 +65,7 @@ Interessiert? Dann kannst du dich hier direkt anmelden. Wir freuen uns auf deine
 
 ### Option 1: Mit TWINT
 
-<div class="twint-button-container" data-solution-id="{{ site.twint_id.mitgliedschaft }}"></div>
+<a href="https://pay.raisenow.io/{{ site.twint_id.mitgliedschaft }}?lng=de" target="_blank" class="btn btn-primary btn-lg">Mit TWINT bezahlen</a>
 
 ### Option 2: Ich habe kein TWINT
 
@@ -96,7 +96,7 @@ Wenn du kein TWINT hast, kannst du deine Mitgliedschaft per E-Mail beantragen. W
   </div>
 
   <button type="submit" class="btn btn-primary">
-    <span class="me-2">✉</span> Anmeldung einreichen
+    <span class="me-2">️️✉️</span> Anmeldung einreichen
   </button>
 </form>
 
